@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600&family=Roboto:ital,wght@1,300&family=Shadows+Into+Light&family=Varela+Round&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    line-height: 1.6;
+    background-color: rgb(208, 225, 220);
+}
+h1{
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin: 40px 0 60px 0;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+#search-input{
+    width: 60%;
+    max-width: 400px;
+    padding: 10px 20px;
+    border: none;
+    box-shadow: 0 0 6px black;
+    border-radius: 5px;
+    font-size: 19px;
+    color: rgb(4, 108, 199);
+}
+
+#search-button{
+    padding: 10px 20px;
+    border: none;
+    background-color: rgb(151, 172, 177);
+    border-radius: 5px;
+    font-size: 19px;
+    box-shadow: 0 0 6px black;
+    color: white;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.search-results{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.search-result{
+    margin-bottom: 60px;
+    width: 35%;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 6px black;
+    overflow: hidden;
+}
+
+.search-result img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: opacity 0.2s ease-in-out;
+}
+.search-result:hover img{
+    opacity: 0.8;
+}
+.search-result a{
+    font-size: 20px;
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 10px;
+    text-transform: capitalize;
+}
+
+#show-more-button{
+    display: block;
+    text-align: center;
+    border: none;
+    font-size: 20px;
+    border-radius: 5px;
+    background-color: rgb(151, 172, 177);
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0 0 6px black;
+    cursor: pointer;
+    margin: 30px auto;
+    display: none;
+}
+
+@media screen and(max-width: 770px) {
+    .search-results{
+        padding: 20px;
+    }
+    .search-result{
+        width: 45%;
+    }
+}
+
+@media screen and(max-width: 485px) {
+    .search-result {
+        width: 100%;
+    }
+}
